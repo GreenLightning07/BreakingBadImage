@@ -1,8 +1,14 @@
 Beginner:
-What file stores password hashes?
-What is the loopback address?
-What is the full filepath to the file named PandaVillage.txt?
+What is the full filepath to the file that stores password hashes?: /etc/passwd
+What is the loopback address?: 127.0.0.1
+What is the full filepath to the file named PandaVillage.txt?: /dev/PandaVilliage.txt
 
 Returner:
 What drive is formatted in FAT32?
-stenography.
+stenography
+How many C's are in Forensics3Challenge.txt
+
+Advanced:
+What is the filepath to the directory containing client information (passwords and usernames)
+What is the name of the malicious python script on this machine.
+What file controls firefox preferences
