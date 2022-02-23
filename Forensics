@@ -1,14 +1,14 @@
 Beginner:
-What is the full filepath to the file that stores password hashes?: /etc/passwd
+What is the full filepath to the file that stores password hashes?: /etc/shadow
 What is the loopback address?: 127.0.0.1
 What is the full filepath to the file named PandaVillage.txt?: /dev/PandaVilliage.txt
 
 Returner:
-What drive is formatted in FAT32?
-stenography
+What drive is formatted in FAT32?L /dev/sda1
+stenography: The dragon warrior scroll is blank
 How many C's are in Forensics3Challenge.txt
 
 Advanced:
-What is the filepath to the directory containing client information (passwords and usernames)
-What is the name of the malicious python script on this machine.
-What file controls firefox preferences
+Decode the following message: Vu gx jxgqqxomgxkt :Po is the dragon warrior
+What is the name of the malicious python script on this machine. xysljfds.py
+What file controls firefox preferences: /home/po/.mozilla/firefox/hs3wo7ii.default-release/prefs.js
