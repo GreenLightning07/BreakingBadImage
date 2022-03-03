@@ -5,4 +5,12 @@ Beginner Vulns:
   - Added authorized admin Po
   - Correct file permnissions set on /etc/shadow
   - Stickybit set on /var/tmp
-  - 
+  - Correct owner on /etc/fstab
+  - Block popups in Firefox
+  - Removed netcat backdoor
+  - Correct max password days set
+  - Using correct encrypt method
+  - Require digits in password
+  - Automatically download and install security updates
+  - Firefox is updated
+  - Netcat is removed
