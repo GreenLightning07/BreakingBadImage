@@ -1,5 +1,8 @@
 Beginner Vulns:
-Unauthorized use Kai removed
-Removed unauthorized hidden user TaiLung
-Removed unauthorized admin Tigress
-Added authorized admin Po
+  - Unauthorized use Kai removed
+  - Removed unauthorized hidden user TaiLung
+  - Removed unauthorized admin Tigress
+  - Added authorized admin Po
+  - Correct file permnissions set on /etc/shadow
+  - Stickybit set on /var/tmp
+  - 
