@@ -1,0 +1,5 @@
+Beginner Vulns:
+Unauthorized use Kai removed
+Removed unauthorized hidden user TaiLung
+Removed unauthorized admin Tigress
+Added authorized admin Po
