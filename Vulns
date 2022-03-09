@@ -1,5 +1,5 @@
 Beginner Vulns:
-  - Unauthorized use Kai removed
+  - Removed unauthorized user Kai 
   - Removed unauthorized hidden user TaiLung
   - Removed unauthorized admin Tigress
   - Added authorized admin Po
@@ -14,3 +14,6 @@ Beginner Vulns:
   - Automatically download and install security updates
   - Firefox is updated
   - Netcat is removed
+
+Returner Vulns:
+  - 
