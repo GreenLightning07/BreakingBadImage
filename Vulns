@@ -18,7 +18,8 @@ Beginner Vulns:
   - UFW is enabled
   - UFW logging set to high
   - Guest account disabled
-  - 
+  - IPv6 Disabled
 
 Returner Vulns:
-  - 
+  - Audits enabled
+  - Forkbomb protection enabled
