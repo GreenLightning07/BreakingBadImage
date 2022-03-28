@@ -23,3 +23,5 @@ Beginner Vulns:
 Returner Vulns:
   - Audits enabled
   - Forkbomb protection enabled
+  - Correct shell set on user Oogway
+  - 
