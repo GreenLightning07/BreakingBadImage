@@ -27,4 +27,12 @@ LINUX VULNS
   - Correct shell set on user Oogway
   - Malicious python script is removed
   - Unauthorized media files removed
+  - Password archive removed
+  
+APACHE 2 VULNS
+  - Apache runs on correct port
+  - Server tokens set to prod
+  - Trace enabled set to off
+  - Apache does not run as root
+  - Etags are hidden
   - 
