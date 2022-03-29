@@ -19,6 +19,9 @@ LINUX VULNS
   - UFW logging set to high
   - Guest account disabled
   - IPv6 Disabled
+  - Packet forwarding disabled
+  - Martian packets logged
+  - ICMP pings disabled
   - Audits enabled
   - Forkbomb protection enabled
   - Correct shell set on user Oogway
