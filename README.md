@@ -4,7 +4,7 @@ Scenario
 Tai Lung, Lord Shen, and Kai are at large again. Master Shifu has entrusted you, Po Ping, the dragon warrior, to secure the super secret server that contains the Jade Palace’s secret archive. 
 
 Requirements  
-The contents of the archive must be able to be transferred to other temples via VsFtp. Also, OpenVPN must be functional to allow Master Oogway’s spirit to connect to the server. The Apache2 server must be accessible externally on port 80. MySql must be remotely accessible. Perform any necessary updates but keep Ubuntu on version 20. Make sure to use secure passwords for all services requiring password. Remove any hacking tools and malicious packets. We have received reports that multiple backdoors are installed on the server. Remove them. Please remove user Kai. He betrayed Master Oogway and is now working with malicious actors.
+The contents of the archive must be able to be transferred to other temples via VsFtp. Also, OpenVPN must be functional to allow Master Oogway’s spirit to connect to the server. The Apache2 server must be accessible externally on port 80. MySql must be remotely accessible. Perform any necessary updates but keep Ubuntu on version 20. Do not allow ICMP pings. Make sure to use secure passwords for all services requiring password. Remove any hacking tools and malicious packets. We have received reports that multiple backdoors are installed on the server. Remove them. Please remove user Kai. He betrayed Master Oogway and is now working with malicious actors.
 
 Authorized Services  
 Apache2 - n/a  
