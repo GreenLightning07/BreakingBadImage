@@ -25,4 +25,6 @@ LINUX VULNS
   - Audits enabled
   - Forkbomb protection enabled
   - Correct shell set on user Oogway
+  - Malicious python script is removed
+  - Unauthorized media files removed
   - 
