@@ -35,4 +35,11 @@ APACHE 2 VULNS
   - Trace enabled set to off
   - Apache does not run as root
   - Etags are hidden
+  - XSS protection enabled
+  - Correct timeout length set
+  - Apache security modules installed
+  - Indexing disabled
+  - SSL disabled
+  
+MYSQL VULNS
   - 
