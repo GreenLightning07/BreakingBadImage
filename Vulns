@@ -7,7 +7,7 @@ LINUX VULNS
   - Stickybit set on /var/tmp
   - Correct owner on /etc/fstab
   - Block popups in Firefox
-  - Removed netcat backdoor
+  - Removed netcat backdoor **NEED TO DO**
   - Correct max password days set
   - Using correct encrypt method
   - Require digits in password
