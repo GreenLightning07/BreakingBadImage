@@ -14,12 +14,12 @@ VsFtp - n/a
 OpenVPN - n/a  
 
 Authorized Accounts  
-Admins  
+Admins:
 Oogway:1nn3rP3@ce  
 Po:iamdragonwarrior  
 Shifu:Stup1dF@tPanda  
 
-Users  
+Users:
 MrPing  
 Zeng  
 Mantis  
