@@ -2,7 +2,7 @@ LINUX VULNS
   - Removed unauthorized user Kai 
   - Removed unauthorized hidden user TaiLung
   - Removed unauthorized admin Tigress
-  - Added authorized admin Po
+  - Added authorized admin Po **NEED TO DO**
   - Correct file permnissions set on /etc/shadow
   - Stickybit set on /var/tmp
   - Correct owner on /etc/fstab
@@ -42,4 +42,6 @@ APACHE 2 VULNS
   - SSL disabled
   
 MYSQL VULNS
+  - Correct bind address set
+  - MySQL runs on correct port
   - 
