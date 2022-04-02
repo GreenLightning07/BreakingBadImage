@@ -1,31 +1,31 @@
 LINUX VULNS
-  - Removed unauthorized user Kai 
-  - Removed unauthorized hidden user TaiLung
-  - Removed unauthorized admin Tigress
-  - Added authorized admin Po **NEED TO DO**
-  - Correct file permnissions set on /etc/shadow
-  - Stickybit set on /var/tmp
-  - Correct owner on /etc/fstab
-  - Block popups in Firefox
-  - Removed netcat backdoor **NEED TO DO**
-  - Correct max password days set
-  - Using correct encrypt method
-  - Require digits in password
-  - Automatically download and install security updates
-  - Firefox is updated
-  - Netcat is removed
-  - Samba is removed
-  - UFW is enabled
-  - UFW logging set to high
-  - Guest account disabled
-  - IPv6 Disabled
-  - Packet forwarding disabled
-  - Martian packets logged
-  - ICMP pings disabled
-  - Audits enabled
-  - Forkbomb protection enabled
-  - Correct shell set on user Oogway
-  - Malicious python script is removed
+  - Removed unauthorized user Kai *
+  - Removed unauthorized hidden user TaiLung *
+  - Removed unauthorized admin Tigress *
+  - Added authorized admin Po
+  - Correct file permnissions set on /etc/shadow *
+  - Stickybit set on /var/tmp *
+  - Correct owner on /etc/fstab *
+  - Block popups in Firefox *
+  - Removed netcat backdoor 
+  - Correct max password days set *
+  - Using correct encrypt method *
+  - Require digits in password *
+  - Automatically download and install security updates *
+  - Firefox is updated *
+  - Netcat is removed *
+  - Samba is removed *
+  - UFW is enabled *
+  - UFW logging set to high *
+  - Guest account disabled *
+  - IPv6 Disabled *
+  - Packet forwarding disabled *
+  - Martian packets logged *
+  - ICMP pings disabled *
+  - Audits enabled *
+  - Forkbomb protection enabled *
+  - Correct shell set on user Oogway *
+  - Ransomeware removed 
   - Unauthorized media files removed
   - Password archive removed
   
