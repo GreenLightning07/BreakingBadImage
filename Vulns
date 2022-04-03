@@ -29,6 +29,7 @@ LINUX VULNS
   - Ransomeware removed *
   - Unauthorized media files removed 
   - Password archive removed *
+  - Passwords changed using correct encrypt method *
   
 APACHE 2 VULNS
   - Apache runs on correct port
