@@ -27,8 +27,8 @@ LINUX VULNS
   - Forkbomb protection enabled *
   - Correct shell set on user Oogway *
   - Ransomeware removed *
-  - Unauthorized media files removed *
-  - Password archive removed 
+  - Unauthorized media files removed 
+  - Password archive removed *
   
 APACHE 2 VULNS
   - Apache runs on correct port
