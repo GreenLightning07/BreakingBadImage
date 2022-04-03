@@ -1,0 +1,91 @@
+<DOCTYPE html>
+<body>
+	<h2><center>Score Report</center></h3>
+	<h3><center>x/200</h4>
+	<button type="button" class="collapsible">LINUX (x/30)</button>
+	<div class="linux">
+		<h5 style="display:none">Removed unauthorized user Kai</h5>
+		<h5 style="display:none">Removed unauthorized hidden user TaiLung</h5>
+		<h5 style="display:none">Removed unauthorized admin Tigress</h5>
+		<h5 style="display:none">Added authorized admin Po</h5>
+		<h5 style="display:none">Secure password set for Po</h5>
+		<h5 style="display:none">Correct file permnissions set on /etc/shadow</h5>
+		<h5 style="display:none">Stickybit set on /var/tmp</h5>
+		<h5 style="display:none">Correct owner on /etc/fstab</h5>
+		<h5 style="display:none">Block popups in Firefox</h5>
+		<h5 style="display:none">Removed netcat backdoor</h5> 
+		<h5 style="display:none">Correct max password days set</h5>
+		<h5 style="display:none">Using correct encrypt method</h5>
+		<h5 style="display:none">Require digits in password</h5>
+		<h5 style="display:none">Automatically download and install security updates</h5>
+		<h5 style="display:none">Firefox is updated</h5>
+		<h5 style="display:none">Netcat is removed</h5>
+		<h5 style="display:none">Samba is removed</h5>
+		<h5 style="display:none">UFW is enabled</h5>
+		<h5 style="display:none">UFW logging set to high</h5>
+		<h5 style="display:none">Guest account disabled</h5>
+		<h5 style="display:none">IPv6 Disabled</h5>
+		<h5 style="display:none">Packet forwarding disabled</h5>
+		<h5 style="display:none">Martian packets logged</h5>
+		<h5 style="display:none">ICMP pings disabled</h5>
+		<h5 style="display:none">Audits enabled</h5>
+		<h5 style="display:none">Forkbomb protection enabled</h5>
+		<h5 style="display:none">Correct shell set on user Oogway</h5>
+		<h5 style="display:none">Ransomeware removed</h5>
+		<h5 style="display:none">Unauthorized media files removed</h5> 
+ 		<h5 style="display:none">Password archive removed</h5>
+	</div>
+</body>
+<style>
+.collapsible {
+  	background-color: #eee;
+  	color: #444;
+  	cursor: pointer;
+  	padding: 10px;
+  	border: none;
+  	text-align: center;
+  	outline: none;
+	font-size: 18px;
+	width: 25%;
+}
+
+.active, .collapsible:hover {
+	background-color: #ccc;
+}
+
+.linux {
+  	padding: 0 18px;
+  	background-color: white;
+  	max-height: 0;
+  	overflow: hidden;
+  	transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  	content: '\02795';
+  	font-size: 13px;
+  	color: white;
+  	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	content: "\2796"; 
+} 
+</style>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
