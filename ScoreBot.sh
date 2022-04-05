@@ -84,7 +84,7 @@ do
 		hide-vuln "l4" "linux_found"
 	fi
 
-	if ( ! cat /etc/shadow | grep "po" | grep "$1$RNW/raIJ$yQAKMclO2hNgJIz4flS2z0" ); then
+	if ( ! cat /etc/shadow | grep "po" | grep "$1$9GzrkEx5$QDnXTw3G.aKOHpyQxHZh.0" ); then
 		if ( cat $score_report | grep 'id="l5"' | grep "display:none" ); then
 			show-vuln "l5" "linux_found"
 		fi
