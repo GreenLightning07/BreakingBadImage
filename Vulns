@@ -41,6 +41,7 @@ APACHE 2 VULNS
   - Apache security modules installed
   - Indexing disabled
   - SSL disabled
+  - ... folder that links to /
   
 MYSQL VULNS
   - Correct bind address set
