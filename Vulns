@@ -11,7 +11,7 @@ LINUX VULNS
   - Removed malicious python script :done:
   - Correct max password days set :done:
   - Using correct encrypt method :done:
-  - Require digits in password 
+  - Require digits in password :done:
   - Automatically download and install security updates 
   - Netcat is removed 
   - Samba is removed 
