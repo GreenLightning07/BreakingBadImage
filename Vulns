@@ -1,15 +1,15 @@
 LINUX VULNS
-  - Removed unauthorized user Kai 
-  - Removed unauthorized hidden user TaiLung
-  - Removed unauthorized admin Tigress 
-  - Added authorized admin Po
-  - Secure password set for Po 
-  - Correct file permnissions set on /etc/shadow 
-  - Stickybit set on /var/tmp 
-  - Correct owner on /etc/fstab 
-  - Block popups in Firefox 
-  - Removed malicious python script
-  - Correct max password days set 
+  - Removed unauthorized user Kai :done:
+  - Removed unauthorized hidden user TaiLung :done:
+  - Removed unauthorized admin Tigress :done:
+  - Added authorized admin Po :done:
+  - Secure password set for Po :done:
+  - Correct file permnissions set on /etc/shadow :done:
+  - Stickybit set on /var/tmp :done:
+  - Correct owner on /etc/fstab :done:
+  - Block popups in Firefox :done:
+  - Removed malicious python script :done:
+  - Correct max password days set :done:
   - Using correct encrypt method 
   - Require digits in password 
   - Automatically download and install security updates 
