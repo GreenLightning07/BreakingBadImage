@@ -10,7 +10,7 @@ LINUX VULNS
   - Block popups in Firefox :done:
   - Removed malicious python script :done:
   - Correct max password days set :done:
-  - Using correct encrypt method 
+  - Using correct encrypt method :done:
   - Require digits in password 
   - Automatically download and install security updates 
   - Netcat is removed 
