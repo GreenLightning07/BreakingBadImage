@@ -12,7 +12,7 @@ LINUX VULNS
   - Correct max password days set :done:
   - Using correct encrypt method :done:
   - Require digits in password :done:
-  - Automatically download and install security updates 
+  - Automatically download and install security updates :done:
   - Netcat is removed 
   - Samba is removed 
   - UFW is enabled 
