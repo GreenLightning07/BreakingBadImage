@@ -13,7 +13,7 @@ LINUX VULNS
   - Using correct encrypt method :done:
   - Require digits in password :done:
   - Automatically download and install security updates :done:
-  - Netcat is removed 
+  - Netcat is removed :done:
   - Samba is removed 
   - UFW is enabled 
   - UFW logging set to high 
