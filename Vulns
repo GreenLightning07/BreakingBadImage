@@ -14,7 +14,7 @@ LINUX VULNS
   - Require digits in password :done:
   - Automatically download and install security updates :done:
   - Netcat is removed :done:
-  - Samba is removed 
+  - Samba is removed :done:
   - UFW is enabled 
   - UFW logging set to high 
   - Guest account disabled 
