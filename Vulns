@@ -15,17 +15,15 @@ LINUX VULNS
   - Automatically download and install security updates :done:
   - Netcat is removed :done:
   - Samba is removed :done:
-  - UFW is enabled 
-  - UFW logging set to high 
-  - Guest account disabled 
-  - IPv6 Disabled 
-  - Packet forwarding disabled 
+  - UFW is enabled :done:
+  - UFW logging set to high :done:
+  - IPv6 Disabled :done:
+  - Packet forwarding disabled :done:
   - Martian packets logged 
   - ICMP pings disabled 
   - Audits enabled 
   - Forkbomb protection enabled 
   - Correct shell set on user Oogway 
-  - Ransomeware removed 
   - Unauthorized media files removed 
   - Password archive removed 
   - Passwords changed using correct encrypt method 
