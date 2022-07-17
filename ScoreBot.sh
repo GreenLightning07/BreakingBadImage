@@ -199,5 +199,21 @@ do
 		hide-vuln "l16" "linux_found" "Samba is removed" "Linux16;"
 	fi
 
+	if ( ufw status | grep -w "active" ); then
+		if ( cat $score_report | grep 'id="l17"' | grep "display:none" ); then
+			show-vuln "l17" "linux_found" "Linux17;" "UFW is enabled"
+		fi
+	elif ( cat $score_report | grep 'id="l17"' | grep "display:block" ); then
+		hide-vuln "l17" "linux_found" "UFW is enabled" "Linux17;"
+	fi
+
+	if ( ufw status verbose | grep "Logging:" | grep "on" | grep "high" ); then
+		if ( cat $score_report | grep 'id="l18"' | grep "display:none" ); then
+			show-vuln "l18" "linux_found" "Linux18;" "UFW logging set to high"
+		fi
+	elif ( cat $score_report | grep 'id="l18"' | grep "display:block" ); then
+		hide-vuln "l18" "linux_found" "UFW logging set to high" "Linux18;"
+	fi
+
 sleep 10
 done
