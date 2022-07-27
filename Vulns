@@ -19,7 +19,7 @@ LINUX VULNS
   - UFW logging set to high :done:
   - IPv6 Disabled :done:
   - Packet forwarding disabled :done:
-  - Martian packets logged 
+  - Martian packets logged :done:
   - ICMP pings disabled 
   - Audits enabled 
   - Forkbomb protection enabled 
