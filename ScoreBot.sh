@@ -18,8 +18,6 @@ function update-found
 	total_found=$((linux_found + apache_found + mysql_found + vsftp_found + openvpn_found))
         sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/200<\/center><\/h3>/g" $score_report
         sed -i "s/id=\"linux_found\".*/id=\"linux_found\">LINUX ($linux_found\/30)<\/button>/g" $score_report
-
-	echo $total_found
 }
 
 function show-vuln()
@@ -42,6 +40,40 @@ function hide-vuln()
 	sed -i "s/$3/$4/g" $score_report
 	notify-send "Uh Oh!" "You Lost Points"
 	update-found
+}
+
+function penalty()
+{
+	sed -i "s/id=\"$1\"style=\"display:none\"/id=\"$1\"style=\"display:block\"/g" $score_report
+	((total_found-=$4))
+        #replaces placeholder name (people should keep their own notes on the points they've gained)
+        sed -i "s/$2/$3/g" $score_report
+        notify-send "Uh Oh!" "You Lost Points"
+        update-found
+
+}
+
+function remove-penalty()
+{
+	#allows vuln name to be seen in score report
+        sed -i "s/id=\"$1\"style=\"display:block\"/id=\"$1\"style=\"display:none\"/g" $score_report
+        ((total_found+=$4))
+        #replaces placeholder name with actual vuln name (obfuscation)
+        sed -i "s/$2/$3/g" $score_report
+        notify-send "Congrats!" "You Gained Points"
+        update-found
+
+}
+
+function check()
+{
+	if ( eval $1 ); then
+		if ( cat $score_report | grep "id=\"$2\"" | grep "display:none" ); then
+			show-vuln "$2" "Vuln$2;" "$3" "$4"
+		fi
+	elif ( cat $score_report | grep "id=\"$2\"" | grep "display:block" ); then
+		hide-vuln "$2" "$3" "Vuln$2;" "$4"
+	fi
 }
 
 function notify-send()
