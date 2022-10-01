@@ -20,7 +20,7 @@ function update-found
 	total_found=$((linux_found + apache_found + mysql_found + vsftp_found + openvpn_found))
 	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*0.005*100)}')
 	linux_percent=$(awk -vn=$linux_found 'BEGIN{print(n*0.033*100)}')
-        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/200<\/center><\/h3>/g" $score_report
+        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found out of 200 security issues fixed<\/center><\/h3>/g" $score_report
 	sed -i "s/id=\"total_percent\".*/id=\"total_percent\">$total_percent%<\/center><\/h3>/g" $score_report
         sed -i "s/id=\"linux_found\".*/id=\"linux_found\">LINUX ($linux_found\/30) $linux_percent%<\/button>/g" $score_report
 }
