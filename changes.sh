@@ -1,3 +1,3 @@
 #! /bin/bash
-/var/local/scorebot.sh
+sudo /var/local/scorebot.sh
 rm -rf KungFuPandaImage
