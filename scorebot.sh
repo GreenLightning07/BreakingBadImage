@@ -69,10 +69,10 @@ function check()
 {
 	if ( eval $1 ); then
 		if ( cat $score_report | grep "id=\"$2\"" | grep "display:none" ); then
-			show-vuln "$2" $3 "Vuln${1: -1};" "$4" "$5"
+			show-vuln "$2" $3 "Vuln${2: -1};" "$4" "$5"
 		fi
 	elif ( cat $score_report | grep "id=\"$2\"" | grep "display:block" ); then
-		hide-vuln "$2" "$3" "$4" "Vuln${1: -1};" "$5" 
+		hide-vuln "$2" "$3" "$4" "Vuln${2: -1};" "$5" 
 	fi
 }
 
