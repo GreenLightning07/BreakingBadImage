@@ -1,6 +1,7 @@
 #!/bin/bash
 
 total_found=0
+total_percent=0
 linux_found=0
 apache_found=0
 mysql_found=0
@@ -16,7 +17,9 @@ function update-found
 {
 	#updates vuln found counts in score report
 	total_found=$((linux_found + apache_found + mysql_found + vsftp_found + openvpn_found))
+	total_percent=($total_found/200)*100
         sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/200<\/center><\/h3>/g" $score_report
+	sed -i "s/id=\"total_found\".*/id=\"total_percent\">$total_percent%<\/center><\/h3>/g" $score_report
         sed -i "s/id=\"linux_found\".*/id=\"linux_found\">LINUX ($linux_found\/30)<\/button>/g" $score_report
 }
 
