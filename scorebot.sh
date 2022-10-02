@@ -9,8 +9,8 @@ mysql_found=0
 vsftp_found=0
 openvpn_found=0
 
-pam_configed=false
-encrypt_set=false
+pam_configed=true
+encrypt_set=true
 
 score_report="/home/po/Desktop/ScoreReport.html"
 
@@ -77,7 +77,7 @@ function check()
 			show-vuln "$2" $3 "Vuln${2: -1};" "$4" "$5"
 		fi
 	elif ( cat $score_report | grep "id=\"$2\"" | grep "display:block" ); then
-		hide-vuln "$2" "$3" "$4" "Vuln${2: -1};" "$5" 
+		hide-vuln "$2" "$3" "$4" "Vuln${2: 1};" "$5" 
 	fi
 }
 
@@ -99,15 +99,20 @@ update-found
 
 while true
 do
-	if ( cat /etc/pam.d/common-password | grep "pam_unix.so" | grep "remember=5" | grep "minlen=8" ); then
-		if ( cat /etc/pam.d/common-password | grep "pam_cracklib.so" | grep "ucredit=-1" | grep "lcredit=-1" | grep "dcredit=-1" | grep "ocredit=-1" ); then
-			pam_configed=true
-		fi
-	else
-		pam_configed=false
-	fi
+	#if ( cat /etc/pam.d/common-password | grep "pam_unix.so" | grep "remember=5" | grep "minlen=8" ); then
+	#	if ( cat /etc/pam.d/common-password | grep "pam_cracklib.so" | grep "ucredit=-1" | grep "lcredit=-1" | grep "dcredit=-1" | grep "ocredit=-1" ); then
+	#		pam_configed=true
+	#	fi
+	#else
+	#	pam_configed=false
+	#fi
 
-	check "! cat /etc/passwd | grep kai" "l1" "linux_found" "Removed unauthorized user Kai" "1"	
+	check "! cat /etc/passwd | grep kai" "l1" "linux_found" "Removed unauthorized user Kai" "1"
+	check "! cat /etc/passwd | grep tailung" "l2" "linux_found" "Removed unauthorized hidden user tailung" "1"
+	check "! cat /etc/group | grep sudo | grep tigress" "l3" "linux_found" "Removed unauthorized admin tigress" "1"
+	check "cat /etc/group | grep sudo | grep po" "l4" "linux_found" "Added authorized admin po" "1"
+	check '! cat /etc/shadow | grep po | grep $1 && $pam_configed && $encrypt_set' "l5" "linux_found" "Secure password set for po" "1"
+	
 
 sleep 10
 done
