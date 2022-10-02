@@ -111,7 +111,7 @@ do
 	check "! cat /etc/passwd | grep tailung" "l2" "linux_found" "Removed unauthorized hidden user tailung" "1"
 	check "! cat /etc/group | grep sudo | grep tigress" "l3" "linux_found" "Removed unauthorized admin tigress" "1"
 	check "cat /etc/group | grep sudo | grep po" "l4" "linux_found" "Added authorized admin po" "1"
-	check '! cat /etc/shadow | grep po | grep $1 && $pam_configed && $encrypt_set' "l5" "linux_found" "Secure password set for po" "1"
+	check '! cat /etc/shadow | grep po | grep \$1 && $pam_configed && $encrypt_set' "l5" "linux_found" "Secure password set for po" "1"
 	
 
 sleep 10
