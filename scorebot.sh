@@ -9,8 +9,8 @@ mysql_found=0
 vsftp_found=0
 openvpn_found=0
 
-pam_configed=true
-encrypt_set=true
+pam_configed=false
+encrypt_set=false
 
 score_report="/home/po/Desktop/ScoreReport.html"
 
@@ -74,7 +74,7 @@ function check()
 {
 	if ( eval $1 ); then
 		if ( cat $score_report | grep "id=\"$2\"" | grep "display:none" ); then
-			show-vuln "$2" $3 "Vuln${2: -1};" "$4" "$5"
+			show-vuln "$2" $3 "Vuln${2: 1};" "$4" "$5"
 		fi
 	elif ( cat $score_report | grep "id=\"$2\"" | grep "display:block" ); then
 		hide-vuln "$2" "$3" "$4" "Vuln${2: 1};" "$5" 
