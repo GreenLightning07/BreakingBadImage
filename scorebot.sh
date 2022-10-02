@@ -10,7 +10,7 @@ vsftp_found=0
 openvpn_found=0
 
 pam_configed=true
-encrypt_set=false
+encrypt_set=true
 
 score_report="/home/po/Desktop/ScoreReport.html"
 
