@@ -9,7 +9,7 @@ mysql_found=0
 vsftp_found=0
 openvpn_found=0
 
-pam_configed=false
+pam_configed=true
 encrypt_set=false
 
 score_report="/home/po/Desktop/ScoreReport.html"
