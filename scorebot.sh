@@ -115,6 +115,7 @@ do
 	check 'ls -al /etc/shadow | grep ^"-rw-------" || ls -al /etc/shadow | grep ^"-rw-r-----"' "l6" "linux_found" "Correct file permissions set on /etc/shadow" "1"
 	check "ls -al /var | grep tmp | grep rwt" "l7" "linux_found" "Stickybit set on /var/tmp" "1"
 	check 'ls -o /etc | grep "fstab" | grep "root"' "linux_found" "Correct owner on /etc/fstab" "1"
+	check '! cat /home/po/.mozilla/firefox/hs3wo7ii.default-release/prefs.js | grep user_pref("dom.disable_open_during_load", false);'
 
 sleep 10
 done
