@@ -3,91 +3,36 @@
 	<h2><center>Score Report</center></h3>
 	<h3><center id="total_found">0/200</center></h3>
 	<h3><center id="total_percent">0%</center></h3>
-	<button type="button" class="collapsible" id="linux_found">LINUX (0/30) 0%</button>
-	<div class="linux">
-		<h5 id="l1"style="display:none">Vuln1; </h5>
-		<h5 id="l2"style="display:none">Vuln2;</h5>
-		<h5 id="l3"style="display:none">Vuln3;</h5>
-		<h5 id="l4"style="display:none">Vuln4;</h5>
-		<h5 id="l5"style="display:none">Vuln5;</h5>
-		<h5 id="l6"style="display:none">Vuln6;</h5>
-		<h5 id="l7"style="display:none">Vuln7;</h5>
-		<h5 id="l8"style="display:none">Vuln7;</h5>
-		<h5 id="l9"style="display:none">Vuln9;</h5>
-		<h5 id="l10"style="display:none">Vuln10;</h5> 
-		<h5 id="l11"style="display:none">Vuln11;</h5>
-		<h5 id="l12"style="display:none">Vuln12;</h5>
-		<h5 id="l13"style="display:none">Vuln13;</h5>
-		<h5 id="l14"style="display:none">Vuln14;</h5>
-		<h5 id="l15"style="display:none">Vuln15;</h5>
-		<h5 id="l16"style="display:none">Vuln16;</h5>
-		<h5 id="l17"style="display:none">Vuln17;</h5>
-		<h5 id="l18"style="display:none">Vuln18;</h5>
-		<h5 id="l19"style="display:none">Vuln19;</h5>
-		<h5 id="l20"style="display:none">Vuln20;</h5>
-		<h5 id="l21"style="display:none">Vuln21;</h5>
-		<h5 id="l22"style="display:none">Vuln22;</h5>
-		<h5 id="l23"style="display:none">Vuln23;</h5>
-		<h5 id="l24"style="display:none">Vuln24;</h5>
-		<h5 id="l25"style="display:none">Vuln25;</h5>
-		<h5 id="l26"style="display:none">Vuln26;</h5>
-		<h5 id="l27"style="display:none">Vuln27;</h5>
-		<h5 id="l28"style="display:none">Vuln28;</h5>
-		<h5 id="l29"style="display:none">Vuln29;</h5> 
- 		<h5 id="l30"style="display:none">Vuln30;</h5>
-	</div>
+	<h5 id="1"style="display:none">Vuln1; </h5>
+	<h5 id="2"style="display:none">Vuln2;</h5>
+	<h5 id="3"style="display:none">Vuln3;</h5>
+	<h5 id="4"style="display:none">Vuln4;</h5>
+	<h5 id="5"style="display:none">Vuln5;</h5>
+	<h5 id="6"style="display:none">Vuln6;</h5>
+	<h5 id="7"style="display:none">Vuln7;</h5>
+	<h5 id="8"style="display:none">Vuln7;</h5>
+	<h5 id="9"style="display:none">Vuln9;</h5>
+	<h5 id="10"style="display:none">Vuln10;</h5> 
+	<h5 id="11"style="display:none">Vuln11;</h5>
+	<h5 id="12"style="display:none">Vuln12;</h5>
+	<h5 id="13"style="display:none">Vuln13;</h5>
+	<h5 id="14"style="display:none">Vuln14;</h5>
+	<h5 id="15"style="display:none">Vuln15;</h5>
+	<h5 id="16"style="display:none">Vuln16;</h5>
+	<h5 id="17"style="display:none">Vuln17;</h5>
+	<h5 id="18"style="display:none">Vuln18;</h5>
+	<h5 id="19"style="display:none">Vuln19;</h5>
+	<h5 id="20"style="display:none">Vuln20;</h5>
+	<h5 id="21"style="display:none">Vuln21;</h5>
+	<h5 id="22"style="display:none">Vuln22;</h5>
+	<h5 id="23"style="display:none">Vuln23;</h5>
+	<h5 id="24"style="display:none">Vuln24;</h5>
+	<h5 id="25"style="display:none">Vuln25;</h5>
+	<h5 id="26"style="display:none">Vuln26;</h5>
+	<h5 id="27"style="display:none">Vuln27;</h5>
+	<h5 id="28"style="display:none">Vuln28;</h5>
+	<h5 id="29"style="display:none">Vuln29;</h5> 
+	<h5 id="30"style="display:none">Vuln29;</h5> 
+ 	<h5 id="30"style="display:none">Vuln30;</h5>
 </body>
 <style>
-.collapsible {
-  	background-color: #eee;
-  	color: #444;
-  	cursor: pointer;
-  	padding: 15px;
-  	border: none;
-  	text-align: center;
-  	outline: none;
-	font-size: 18px;
-	width: 100%;
-}
-
-.active, .collapsible:hover {
-	background-color: #ccc;
-}
-
-.linux {
-  	padding: 0 18px;
-	text-align: center;
-  	background-color: white;
-  	max-height: 0;
-  	overflow: hidden;
-  	transition: max-height 0.2s ease-out;
-}
-
-.collapsible:after {
-  	content: '\02795';
-  	font-size: 13px;
-  	color: white;
-  	float: right;
-	margin-left: 5px;
-}
-
-.active:after {
-	content: "\2796"; 
-} 
-</style>
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
-</script>
