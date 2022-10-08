@@ -6,7 +6,7 @@ total_percent=""
 pam_configed=false
 encrypt_set=false
 
-score_report="/home/walter/Desktop/ScoreReport.html"
+score_report="/home/heisenburg/Desktop/ScoreReport.html"
 
 function update-found
 {
