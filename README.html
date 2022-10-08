@@ -14,7 +14,7 @@
 			<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg">
 		</div>
 		<div class="nav-links">
-			<a href="file:///home/heisenburg/Desktop/README.html">README</a>
+			<a class="active"href="file:///home/heisenburg/Desktop/README.html">README</a>
 			<a href="file:///home/heisenburg/Desktop/ScoreReport.html">ScoreReport</a>
 			<a href="">Contact</a>
 		</div>
@@ -91,6 +91,16 @@
 		right: 0;
 		bottom: -10px;
 		transition: 0.3s;
+	}
+	
+	.nav-links a.active:after{
+		content: "";
+		position: absolute;
+		background-color: #d3e0d6;
+		height: 3px;
+		width: 100%;
+		right: 0;
+		bottom: -10px;
 	}
 	
 	.nav-links a:hover{
