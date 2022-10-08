@@ -12,7 +12,7 @@ PHP - N/A
 
 ## Authorized Accounts  
 ### Admins:  
-walter:thegreatheisenburg  
+heisenburg:thegreatheisenburg  
 jesse:Y0MrWh!t3  
 saul:B3tt3rC@llSaul  
 gus:L0sP011o$H3rmanos  
