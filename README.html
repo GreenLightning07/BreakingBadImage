@@ -1,33 +1,84 @@
-<figure>
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg">
-</figure>
-<h2 id="scenario">Scenario</h2>
-<p>Walter and Jesse have recently set up a local webserver and database to manage and keep track of all their customer's orders. They have hired you to secure the machine and the services hosted on it. If you get stuck maybe Gus will give some advice.</p>
-<h2 id="requirements">Requirements</h2>
-<p>DO NOT DELETE GIT OR REMOVE THE LINE RUNNING StartScoring.sh IN CRONTAB.<br><br></p>
-<p>This machine is hosting an Apache2 server that pulls information from a Mysql database using PHP. The Linux machine is running Ubuntu 20.04 and is required to stay on version 20.04. The Apache2 server must only run locally on port 80. The Mysql database should only hold information on how much product is stored, how much is ordered, and the profits from the sales. There must be no information on the individuals buying the product stored in the database. There must be no non-work related media files or hacking tools installed on the machine. Also, one of our cooks, Gale, has been ... disposed of. You must remove his account on this machine. Your job is to secure the required services and the machine the services are hosted on.</p>
-<h2 id="authorized-services">Authorized Services</h2>
-<p>
-Apache2 - N/A<br>
-Mysql - mysql:password123<br>
-PHP - N/A<br>
-</p>
-<h2 id="authorized-accounts">Authorized Accounts</h2>
-<h3 id="admins">Admins:</h3>
-<p>
-heisenburg:thegreatheisenburg<br>
-jesse:Y0MrWh!t3<br>
-saul:B3tt3rC@llSaul<br>
-gus:L0sP011o$H3rmanos<br>
-</p>
-<h3 id="users">Users:</h3>
-<p<
-walter:thegreatheisenburg<br>
-jesse:Y0MrWh!t3<br>
-saul:B3tt3rC@llSaul<br>
-gus:L0sP011o$H3rmanos
-</p>
+<!DOCTYPE html>
+<html lang="en"?
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Breaking Bad | README</title>
+</head>
+
+<body>
+	<nav>
+		<div class="logo">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg">
+		</div>
+		<div class="nav-links">
+			<a href="file:///home/heisenburg/Desktop/README.html">README</a>
+			<a href="file:///home/heisenburg/Desktop/ScoreReport.html">ScoreReport</a>
+			<a href="">Contact</a>
+		</div>
+	</nav>
+	
+	<scenario>
+		<h2>Scenario</h2>
+		<p>Walter and Jesse have recently set up a local webserver and database to manage and keep track of all their customer's orders. They have hired you to secure the machine and the services hosted on it. If you get stuck maybe Gus will give some advice.</p>
+	</scenario>
+</body>
 
 <style>
+	*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	
+	nav{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		min-height: 8vh;
+		background-color: #001f09;
+		font-family: arial;
+		margin: auto;
+	}
 
+	.nav-links{
+                display: flex;
+                justify-content: space-around;
+		width: 30%;
+        }
+	
+	.nav-links a{
+		position: relative;
+		color: #d3e0d6;
+		text-decoration: none;
+		letter-spacing: 1px;
+		font-weight: bold;
+		padding: 0 10px;
+	}
+	
+	.nav-links a:after{
+		content: "";
+		position: absolute;
+		background-color: #d3e0d6;
+		height: 3px;
+		width: 0%;
+		right: 0;
+		bottom: -10px;
+		transition: 0.3s;
+	}
+	
+	.nav-links a:hover{
+		color: white;
+	}
+	
+	.nav-links a:hover:after{
+		width: 100%;
+	}
+
+	img{
+		width: 25%;
+		margin: 10px;
+	{
 </style>
