@@ -11,9 +11,9 @@ score_report="/home/heisenburg/Desktop/ScoreReport.html"
 function update-found
 {
 	#updates vuln found counts in score report
-	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*6.67-0.05)}')
+	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*2.86)}')
 	echo $total_percent
-        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/15<\/h3>/g" $score_report
+        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/35<\/h3>/g" $score_report
         sed -i "s/id=\"total_percent\".*/id=\"total_percent\">$total_percent%<\/h3>/g" $score_report
 }
 
@@ -95,6 +95,10 @@ do
 	check 'cat /home/heisenburg/Desktop/Forensics1 | grep "41943040"' '1' 'Forensics 1 Correct +5' '5'
 	check 'cat /home/heisenburg/Desktop/Forensics2 | grep "2.4.41"' '2' 'Forensics 2 Correct +5' '5'
 	check 'cat /home/heisenburg/Desktop/Forensics3 | grep "OrderArchive"' '3' 'Forensics 3 Correct +5' '5'
+	
+	#linux vulns
+	check 'cat /etc/passwd | grep -v "gale"' '4' 'Hidden User gale is Removed +1' '1'
+	
 	
 	#wait 10 seconds
 	sleep 10
