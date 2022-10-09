@@ -1,0 +1,3 @@
+Forensics 1: How many sectors are allocated to /dev/loop6 - 187776
+Forensics 2: What version of Apache2 is running on this machine - 2.4.41
+Forensics 3: What is the name of the table that holds information on completed orders - OrderArchive
