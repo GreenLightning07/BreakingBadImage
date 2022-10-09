@@ -14,7 +14,7 @@ function update-found
 	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*6.67-0.05)}')
 	echo $total_percent
         sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/15<\/h3>/g" $score_report
-        sed -i "s/id=\"linux_found\".*/id=\"total_percent\">$total_percent%<\/h3>/g" $score_report
+        sed -i "s/id=\"total_percent\".*/id=\"total_percent\">$total_percent%<\/h3>/g" $score_report
 }
 
 function show-vuln()
