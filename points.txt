@@ -1,3 +1,15 @@
-Forensics 1: How many sectors are allocated to /dev/sda - 41943040
-Forensics 2: What version of Apache2 is running on this machine - 2.4.41
-Forensics 3: What is the name of the table that holds information on completed orders - OrderArchive
++5 Forensics 1: How many sectors are allocated to /dev/sda - 41943040
++5 Forensics 2: What version of Apache2 is running on this machine - 2.4.41
++5 Forensics 3: What is the name of the table that holds information on completed orders - OrderArchive
+
+Hidden User gale Removed +1
+Unauthorized Admin hank Removed +1
+Automatically Download and Install Security Updates +1
+Audit Policies Enabled +5
+Correct Encrypt Method Set +2
+Enforce Complex Passwords +2
+Removed Nopasswd Rights +3
+Firewall Logging Enabled +2
+Enable ASLR +3
+Enforcing Forkbomb Protection +4
+Netcat is Removed +1
