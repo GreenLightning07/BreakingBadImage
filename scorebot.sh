@@ -12,8 +12,8 @@ function update-found
 {
 	#updates vuln found counts in score report
 	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*0.005*100)}')
-        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/200<\/center><\/h3>/g" $score_report
-        sed -i "s/id=\"linux_found\".*/id=\"total_percent\">$total_percent%<\/button>/g" $score_report
+        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/200<\/h3>/g" $score_report
+        sed -i "s/id=\"linux_found\".*/id=\"total_percent\">$total_percent%<\/h3>/g" $score_report
 }
 
 function show-vuln()
