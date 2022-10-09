@@ -7,5 +7,6 @@ chmod +x BreakingBadImage/scorebot.sh
 mv BreakingBadImage/scorebot.sh /var/local/scorebot.sh
 mv BreakingBadImage/ScoreReport.html /home/walter/Desktop/ScoreReport.html
 mv BreakingBadImage/README.html /home/walter/Desktop/README.html
+mv BreakingBadImage/Contact.html /home/walter/Desktop/Contact.html
 BreakingBadImage/changes.sh
 sudo /var/local/scorebot.sh
