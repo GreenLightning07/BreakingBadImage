@@ -19,10 +19,12 @@
 			<a href="">Contact</a>
 		</div>
 	</nav>
-	<div class="score-report">
+	<div class="scores">
 		<h2>Score Report</h3>
 		<h3 id="total_found">0/200</h3>
 		<h3 id="total_percent">0%</h3>
+	</div>
+	<div class="points"
 		<h5 id="1"style="display:none">Vuln1; </h5>
 		<h5 id="2"style="display:none">Vuln2;</h5>
 		<h5 id="3"style="display:none">Vuln3;</h5>
@@ -119,6 +121,28 @@
 	
 	.nav-links a:hover:after{
 		width: 100%;
+	}
+	
+	.scores{
+		text-align: center;
+		letter-spacing: 1px;
+		position: relative;
+	}
+	
+	.scores:after{
+		content: "";
+		position: absolute;
+		background-color: #d3e0d6;
+		height: 3px;
+		width: 100%;
+		right: 0;
+		bottom: -10px;
+		padding: 0 30px;
+	}
+	
+	.points{
+		text-align: center;
+		letter-spacing: 1px;
 	}
 	
 	body{
