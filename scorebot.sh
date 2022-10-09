@@ -91,7 +91,7 @@ update-found
 while true
 do
 	#forensics 5pts each
-	check 'cat /home/heisenburg/Desktop/Forensics1 | grep "187776"' '1' 'Forensics 1 Correct +5' '5'
+	check 'cat /home/heisenburg/Desktop/Forensics1 | grep "41943040"' '1' 'Forensics 1 Correct +5' '5'
 	check 'cat /home/heisenburg/Desktop/Forensics2 | grep "2.4.41"' '2' 'Forensics 2 Correct +5' '5'
 	check 'cat /home/heisenburg/Desktop/Forensics3 | grep "OrderArchive"' '3' 'Forensics 3 Correct +5' '5'
 	
