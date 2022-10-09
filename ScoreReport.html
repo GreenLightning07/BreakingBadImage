@@ -19,16 +19,16 @@
 			<a href="">Contact</a>
 		</div>
 	</nav>
+		<h2 class="score-report">Score Report</h3><br>
 	<div class="scores">
-		<h2>Score Report</h3>
 		<h3 id="total_found">0/200</h3>
 		<h3 id="total_percent">0%</h3>
 	</div>
 	<div class="points">
-			<p id="1"style="display:none">Vuln1;</p>
-			<p id="2"style="display:none">Vuln2;</p>
-			<p id="3"style="display:none">Vuln3;</p>
-			<p id="4"style="display:none">Vuln4;</p>
+			<p id="1"style="display:block">Vuln1;</p>
+			<p id="2"style="display:block">Vuln2;</p>
+			<p id="3"style="display:block">Vuln3;</p>
+			<p id="4"style="display:block">Vuln4;</p>
 			<p id="5"style="display:none">Vuln5;</p>
 			<p id="6"style="display:none">Vuln6;</p>
 			<p id="7"style="display:none">Vuln7;</p>
@@ -87,7 +87,7 @@
 		text-decoration: none;
 		letter-spacing: 1px;
 		font-weight: bold;
-		padding: 0 10px;
+		padding: 0 3px;
 	}
 	
 	.nav-links a:after{
@@ -123,14 +123,41 @@
 		width: 100%;
 	}
 	
+	.score-report{
+                text-align: center;
+                letter-spacing: 1px;
+                position: relative;
+                font-family: arial;
+                line-height: 16pt;
+                color: #000803;
+                margin-top: 25px;
+                margin-left: 40%;
+                margin-right: 40%;
+                padding: 0 10px;
+        }
+
+        .score-report:after{
+                content: "";
+                position: absolute;
+                background-color: #000803;
+                height: 3px;
+                width: 100%;
+                left: 0;
+                bottom: -20px;
+        }
+
+	
 	.scores{
 		text-align: center;
 		letter-spacing: 1px;
 		position: relative;
-		margin: 25px;
 		font-family: arial;
 		line-height: 16pt;
 		color: #000803;
+		margin-top: 25px;
+		margin-left: 40%;
+		margin-right: 40%;
+		padding: 0 10px;
 	}
 	
 	.scores:after{
@@ -139,9 +166,8 @@
 		background-color: #000803;
 		height: 3px;
 		width: 100%;
-		right: 0;
-		bottom: -10px;
-		padding: 0 30px;
+		left: 0;
+		bottom: -20px;
 	}
 	
 	.points{
