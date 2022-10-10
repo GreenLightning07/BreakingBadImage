@@ -97,8 +97,8 @@ do
 	check 'cat /home/heisenburg/Desktop/Forensics3 | grep "OrderArchive"' '3' 'Forensics 3 Correct +5' '5'
 	
 	#linux vulns
-	check 'cat /etc/passwd | grep -v "gale"' '4' 'Hidden User gale is Removed +1' '1'
-	check 'cat /etc/passwd | grep -v "hank" && cat /etc/group | grep "sudo" | grep -v "hank"' '5' 'Unauthorized Admin hank Removed' '1'
+	check '! cat /etc/passwd | grep "gale"' '4' 'Hidden User gale is Removed +1' '1'
+	check '! cat /etc/passwd | grep "hank" && ! cat /etc/group | grep "sudo" | grep "hank"' '5' 'Unauthorized Admin hank Removed' '1'
 	check 'cat /et/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Download-Upgradeable-Packages 1;" && cat /et/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Unattended-Upgrade 1;"' '6' 'Automatically Download and Install Security Updates' '1'
 	
 	#wait 10 seconds
