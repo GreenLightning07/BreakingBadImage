@@ -98,7 +98,8 @@ do
 	
 	#linux vulns
 	check 'cat /etc/passwd | grep -v "gale"' '4' 'Hidden User gale is Removed +1' '1'
-	
+	check 'cat /etc/passwd | grep -v "hank" && cat /etc/group | grep "sudo" | grep -v "hank"' '5' 'Unauthorized Admin hank Removed' '1'
+	check '
 	
 	#wait 10 seconds
 	sleep 10
