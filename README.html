@@ -29,6 +29,12 @@
 		<p>DO NOT DELETE GIT OR REMOVE THE LINE RUNNING StartScoring.sh IN CRONTAB.</p><br>
 		<p>This machine is hosting an Apache2 server that pulls information from a Mysql database using PHP. The Linux machine is running Ubuntu 20.04 and is required to stay on version 20.04. The Apache2 server must only run locally on port 80. The Mysql database should only hold information on how much product is stored, how much is ordered, and the profits from the sales. There must be no information on the individuals buying the product stored in the database. There must be no non-work related media files or hacking tools installed on the machine. Also, one of our cooks, Gale, has been ... disposed of. You must remove his account from this machine. Your job is to secure the required services and the machine the services are hosted on.</p>
 	</div>
+	<div class="services">
+		<h2>Critical Services</h2><br>
+		<p>Apache2 - N/A</p><br>
+		<p>Mysql - mysql:password123</p><br>
+		<p>PHP - N/A</p><br>	
+	</div>
 	<div class="users">
 		<h2>Authorized Accounts</h2><br>
 		<h3>Admins:</h3><br>
@@ -158,6 +164,30 @@
 	}
 
 	.requirements:after{
+                content: "";
+                position: absolute;
+                background-color: #000803;
+                height: 3px;
+                width: 100%;
+                right: 0;
+                bottom: -25px;
+        }
+	
+	.services{
+		color: #000803;
+                display: block;
+                text-align: center;
+                margin-top: 45px;
+                margin-left: 25%;
+                margin-right: 25%;
+                letter-spacing: 1px;
+                font-family: arial;
+                position: relative;
+                padding: 0 50px;
+		line-height: 16pt;
+	}
+
+	.services:after{
                 content: "";
                 position: absolute;
                 background-color: #000803;
