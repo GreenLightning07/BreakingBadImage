@@ -98,8 +98,8 @@ do
 	
 	#linux vulns
 	check '! cat /etc/passwd | grep "gale"' '4' 'Hidden User gale is Removed +1' '1'
-	check '! cat /etc/passwd | grep "hank" && ! cat /etc/group | grep "sudo" | grep "hank"' '5' 'Unauthorized Admin hank Removed' '1'
-	check 'cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Download-Upgradeable-Packages" | grep "1" && cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Unattended-Upgrade" | grep "1"' '6' 'Automatically Download and Install Security Updates' '1'
+	check '! cat /etc/passwd | grep "hank" && ! cat /etc/group | grep "sudo" | grep "hank"' '5' 'Unauthorized Admin hank Removed +1' '1'
+	check 'cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Download-Upgradeable-Packages" | grep "1" && cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Unattended-Upgrade" | grep "1"' '6' 'Automatically Download and Install Security Updates +1' '1'
 	
 	#wait 10 seconds
 	sleep 10
