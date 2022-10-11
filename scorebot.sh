@@ -102,7 +102,8 @@ do
 	check 'cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Download-Upgradeable-Packages" | grep "1" && cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Unattended-Upgrade" | grep "1"' '6' 'Automatically Download and Install Security Updates +1' '1'
 	check 'service auditd status | grep "running"' '7' 'Audit Policies Enabled +5' '5'
 	check 'cat /etc/pam.d/common-password | grep "pam_unix.so" | grep -iF "sha256" || cat /etc/pam.d/common-password | grep "pam_unix.so" | grep -iF "sha512"' '8' 'Correct Encrypt Method Set +2' '2'
-	
+	check 'cat /etc/pam.d/common-password | grep "cracklib.so" | grep "ucredit=-1" | grep "dcredit=-1" | grep "ocredit=-1" | grep "lcredit=-1"' '9' 'Enforce Complex Passwords +2' '2'
+	check 'cat /etc/sudoers.d/README | grep "%sudo" | grep "NOPASSWD"' '10' 'Removed Nopasswd Rights +3' '3'
 	
 	#wait 10 seconds
 	sleep 10
