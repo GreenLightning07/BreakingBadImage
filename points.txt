@@ -9,7 +9,7 @@ Audit Policies Enabled +5
 Correct Encrypt Method Set +2
 Enforce Complex Passwords +2
 Removed Nopasswd Rights +3
-Firewall Logging Enabled +2
+UFW Logging High +2
 Enable ASLR +3
 Enforcing Forkbomb Protection +4
 Malicious Python Script Removed +3
