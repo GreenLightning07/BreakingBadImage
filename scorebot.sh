@@ -105,6 +105,7 @@ do
 	check 'cat /etc/pam.d/common-password | grep "cracklib.so" | grep "ucredit=-1" | grep "dcredit=-1" | grep "ocredit=-1" | grep "lcredit=-1"' '9' 'Enforce Complex Passwords +2' '2'
 	check 'cat /etc/sudoers.d/README | grep "%sudo" | grep "NOPASSWD"' '10' 'Removed Nopasswd Rights +3' '3'
 	check 'ufw status verbose | grep "logging" | grep "high"' '11' 'UFW Logging High +2' '2'
+	check 
 	
 	
 	#wait 10 seconds
