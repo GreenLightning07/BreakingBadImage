@@ -11,7 +11,7 @@ score_report="/home/heisenburg/Desktop/ScoreReport.html"
 function update-found
 {
 	#updates vuln found counts in score report
-	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*2.86)}')
+	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*2.857142858)}')
 	echo $total_percent
         sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/35<\/h3>/g" $score_report
         sed -i "s/id=\"total_percent\".*/id=\"total_percent\">$total_percent%<\/h3>/g" $score_report
