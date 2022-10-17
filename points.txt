@@ -16,4 +16,4 @@ Malicious Python Script Removed +3
 Correct Owner on /etc/passwd Set +2
 HashDeep is Removed +4
 Netcat is Removed +1
-NGINX is Removed +1
+Service NGINX is Stopped or Removed +1
