@@ -11,8 +11,8 @@ Enforce Complex Passwords +2
 Removed Nopasswd Rights +3
 UFW Logging High +2
 Enable ASLR +3
-Enforcing Forkbomb Protection +4
-Malicious Python Script Removed +3
+Enforcing Forkbomb Protection +3
+Malicious Python Script Removed +4
 Correct Owner on /etc/passwd Set +2
 HashDeep is Removed +4
 Netcat is Removed +1
