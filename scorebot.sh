@@ -106,7 +106,8 @@ do
 	check '! cat /etc/sudoers.d/README | grep "%sudo" | grep "NOPASSWD"' '10' 'Removed Nopasswd Rights +3' '3'
 	check 'ufw status verbose | grep "Logging" | grep "high"' '11' 'UFW Logging High +2' '2'
 	check 'cat /etc/sysctl.conf | grep "kernel.randomize_va_space" | grep "1"' '12' 'ASLR is Enabled +3' '3'
-	check 'cat /etc/security/limits.conf | grep "*" | grep "hard" | grep "nproc" | grep "2048"' '13' 'Forkbomb Protection Enabled +4' '4'
+	check 'cat /etc/security/limits.conf | grep "*" | grep "hard" | grep "nproc" | grep "2048"' '13' 'Forkbomb Protection Enabled +3' '3'
+	check '! ls /etc/fonts/conf.d | grep "abcd.py"' '14' 'Malicious Python Script Removed +4' '3'
 	
 	#wait 10 seconds
 	sleep 10
