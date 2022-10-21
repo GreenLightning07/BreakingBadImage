@@ -103,7 +103,7 @@ do
 	check 'service auditd status | grep "running"' '7' 'Audit Policies Enabled +5' '5'
 	check 'cat /etc/pam.d/common-password | grep "pam_unix.so" | grep -iF "sha256" || cat /etc/pam.d/common-password | grep "pam_unix.so" | grep -iF "sha512"' '8' 'Correct Encrypt Method Set +2' '2'
 	check 'cat /etc/pam.d/common-password | grep "cracklib.so" | grep "ucredit=-1" | grep "dcredit=-1" | grep "ocredit=-1" | grep "lcredit=-1"' '9' 'Enforce Complex Passwords +2' '2'
-	check '! cat /etc/sudoers.d/README | grep "%sudo" | grep "NOPASSWD"' '10' 'Removed Nopasswd Rights +3' '3'
+	check '! cat /etc/sudoers.d/README | grep ^"%sudo" | grep "NOPASSWD"' '10' 'Removed Nopasswd Rights +3' '3'
 	check 'ufw status verbose | grep "Logging" | grep "high"' '11' 'UFW Logging High +2' '2'
 	check 'cat /etc/sysctl.conf | grep "kernel.randomize_va_space" | grep "1"' '12' 'ASLR is Enabled +3' '3'
 	check 'cat /etc/security/limits.conf | grep "*" | grep "hard" | grep "nproc" | grep "2048"' '13' 'Forkbomb Protection Enabled +3' '3'
