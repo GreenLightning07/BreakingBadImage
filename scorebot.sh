@@ -49,7 +49,7 @@ function penalty()
 	if ( $total_pen > 0 ); then
 		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
 	else
-		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" score_report
+		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" $score_report
 	fi
 		
         #replaces placeholder name (people should keep their own notes on the points they've gained)
@@ -67,9 +67,9 @@ function remove-penalty()
 	((total_pen-1))
 	
 	if ( $total_pen > 0 ); then
-		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g"$score_report
+		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
 	else
-		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" score_report
+		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" $score_report
 	fi
 	
         #replaces placeholder name with actual vuln name (obfuscation)
