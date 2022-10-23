@@ -111,7 +111,7 @@ do
 	check 'ls -al /etc/passwd | cut -d " " -f 3 | grep "root"' '15' 'Correct Owner Set on \/etc\/passwd +2' '2'
 	check '! dpkg -l | grep "hashdeep"' '16' 'HashDeep is Removed +4' '4'
 	check '! dpkg -l | grep "netcat"' '17' 'Netcat is Removed +1' '1'
-	
+	check '! service nginx status | grep "running"' '18' 'Service NGINX is Stopped or Removed +1' '1'	
 	#wait 10 seconds
 	sleep 10
 done
