@@ -47,7 +47,7 @@ function penalty()
 	((total_pen+=1))
 	
 	if ( $total_pen > 0 ); then
-		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g"$score_report
+		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
 	else
 		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" score_report
 	fi
