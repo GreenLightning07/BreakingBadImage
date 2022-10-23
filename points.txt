@@ -1,7 +1,25 @@
+--PENALTIES--
+heisenburg is Not an Admin -5
+jesse is Not an Admin -5
+saul is Not an Admin -5
+gus is Not an Admin -5
+
+User heisenburg Was Removed -3
+User jesse Was Removed -3
+User saul Was Removed -3
+User gus Was Removed -3
+User mike Was Removed -3
+User badger Was Removed -3
+User skinnypete Was Removed -3
+User skylar Was Removed -3
+User todd Was Removed -3
+
+--FORENSICS--
 +5 Forensics 1: How many sectors are allocated to /dev/sda - 41943040
 +5 Forensics 2: What version of Apache2 is running on this machine - 2.4.41
 +5 Forensics 3: What is the name of the table that holds information on completed orders - OrderArchive
 
+--LINUX VULNS--
 Hidden User gale Removed +1
 Unauthorized Admin hank Removed +1
 Automatically Download and Install Security Updates +1
