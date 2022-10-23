@@ -102,10 +102,10 @@ function check-pen()
 {
 	if ( eval $1 ); then
 		if ( cat $score_report | grep "id=\"$2\"" | grep "display:none" ); then
-			penalty "$2" "Vuln$2;" "$3" "$4"
+			penalty "$2" "$2;" "$3" "$4"
 		fi
 	elif ( cat $score_report | grep "id=\"$2\"" | grep "display:block" ); then
-		remove-penalty "$2" "$3" "Vuln$2;" "$4"
+		remove-penalty "$2" "$3" "$2;" "$4"
 	fi
 }
 
@@ -113,6 +113,23 @@ update-found
 
 while true
 do
+	#penalties
+	check-pen '! netstat -tulpn | grep apache2 | cut -d " " -f16 | grep ":80"$' 'p1' 'Apache2 is Disabled or Running on Wrong Port -10' '10'
+	check-pen '! netstat -tulpn | grep mysql | cut -d " " -f16 | grep ":3306"$' 'p2' 'MySQL is Disabled or Running on Wrong Port -10' '10'
+	check-pen '! cat /etc/group | grep "sudo:x:" | grep "heisenburg"' 'p3' 'heisenburg is Not an Admin -5' '5'
+	check-pen '! cat /etc/group | grep "sudo:x:" | grep "jesse"' 'p4' 'jesse is Not an Admin -5' '5'
+	check-pen '! cat /etc/group | grep "sudo:x:" | grep "saul"' 'p5' 'saul is Not an Admin -5' '5'
+	check-pen '! cat /etc/group | grep "sudo:x:" | grep "gus"' 'p6' 'gus is Not an Admin -5' '5'
+	check-pen '! cat /etc/passwd | grep "heisenburg"' 'p7' 'User heisenburg was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "jesse"' 'p8' 'User jesse was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "saul"' 'p9' 'User saul was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "gus"' 'p10' 'User gus was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "mike"' 'p11' 'User mike was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "badger"' 'p12' 'User badger was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "skinnypete"' 'p13' 'User skinnypete was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "skylar"' 'p14' 'User skylar was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "todd"' 'p15' 'User todd was Removed -3' '3'
+	
 	#forensics 5pts each
 	check 'cat /home/heisenburg/Desktop/Forensics1 | grep "41943040"' '1' 'Forensics 1 Correct +5' '5'
 	check 'cat /home/heisenburg/Desktop/Forensics2 | grep "2.4.41"' '2' 'Forensics 2 Correct +5' '5'
