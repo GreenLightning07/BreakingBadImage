@@ -107,7 +107,7 @@ do
 	check 'ufw status verbose | grep "Logging" | grep "high"' '11' 'UFW Logging High +2' '2'
 	check 'cat /etc/sysctl.conf | grep "kernel.randomize_va_space" | grep "1"' '12' 'ASLR is Enabled +3' '3'
 	check 'cat /etc/security/limits.conf | grep "*" | grep "hard" | grep "nproc" | grep "2048"' '13' 'Forkbomb Protection Enabled +3' '3'
-	check '! ls /etc/fonts/conf.d | grep "abcd.py"' '14' 'Malicious Python Script Removed +4' '3'
+	check '! ls /etc/fonts/conf.d | grep "abcd.py"' '14' 'Malicious Python Script Removed +4' '4'
 	check 'ls -al /etc/passwd | cut -d " " -f 3 | grep "root"' '15' 'Correct Owner Set on \/etc\/passwd +2' '2'
 	check '! dpkg -l | grep "hashdeep"' '16' 'HashDeep is Removed +4' '4'
 	check '! dpkg -l | grep "netcat"' '17' 'Netcat is Removed +1' '1'
