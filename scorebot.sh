@@ -16,6 +16,12 @@ function update-found
 	echo $total_percent
         sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/50<\/h3>/g" $score_report
         sed -i "s/id=\"total_percent\".*/id=\"total_percent\">$total_percent%<\/h3>/g" $score_report
+	
+	if ( $total_pen > 0 ); then
+		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
+	else
+		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" $score_report
+	fi
 }
 
 function show-vuln()
@@ -45,12 +51,6 @@ function penalty()
 	sed -i "s/id=\"$1\"style=\"display:none\"/id=\"$1\"style=\"display:block\"/g" $score_report
 	((total_found-=$4))
 	((total_pen+=1))
-	
-	if ( $total_pen > 0 ); then
-		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
-	else
-		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" $score_report
-	fi
 		
         #replaces placeholder name (people should keep their own notes on the points they've gained)
         sed -i "s/$2/$3/g" $score_report
@@ -65,12 +65,6 @@ function remove-penalty()
         sed -i "s/id=\"$1\"style=\"display:block\"/id=\"$1\"style=\"display:none\"/g" $score_report
         ((total_found+=$4))
 	((total_pen-1))
-	
-	if ( $total_pen > 0 ); then
-		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
-	else
-		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" $score_report
-	fi
 	
         #replaces placeholder name with actual vuln name (obfuscation)
         sed -i "s/$2/$3/g" $score_report
