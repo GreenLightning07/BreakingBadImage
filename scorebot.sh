@@ -2,6 +2,7 @@
 
 total_found=0
 total_percent=""
+total_pen=0
 
 pam_configed=false
 encrypt_set=false
@@ -43,6 +44,14 @@ function penalty()
 {
 	sed -i "s/id=\"$1\"style=\"display:none\"/id=\"$1\"style=\"display:block\"/g" $score_report
 	((total_found-=$4))
+	((total_pen+=1))
+	
+	if ($total_pen > 0); then
+		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g"$score_report
+	else
+		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" score_report
+	fi
+		
         #replaces placeholder name (people should keep their own notes on the points they've gained)
         sed -i "s/$2/$3/g" $score_report
         notify-send "Uh Oh!" "You Lost Points"
@@ -55,6 +64,14 @@ function remove-penalty()
 	#allows vuln name to be seen in score report
         sed -i "s/id=\"$1\"style=\"display:block\"/id=\"$1\"style=\"display:none\"/g" $score_report
         ((total_found+=$4))
+	((total_pen-1))
+	
+	if ($total_pen > 0); then
+		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g"$score_report
+	else
+		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" score_report
+	fi
+	
         #replaces placeholder name with actual vuln name (obfuscation)
         sed -i "s/$2/$3/g" $score_report
         notify-send "Congrats!" "You Gained Points"
@@ -84,6 +101,17 @@ function check()
 		fi
 	elif ( cat $score_report | grep "id=\"$2\"" | grep "display:block" ); then
 		hide-vuln "$2" "$3" "Vuln$2;" "$4"
+	fi
+}
+
+function check-pen()
+{
+	if ( eval $1 ); then
+		if ( cat $score_report | grep "id=\"$2\"" | grep "display:none" ); then
+			penalty "$2" "Vuln$2;" "$3" "$4"
+		fi
+	elif ( cat $score_report | grep "id=\"$2\"" | grep "display:block" ); then
+		remove-penalty "$2" "$3" "Vuln$2;" "$4"
 	fi
 }
 
