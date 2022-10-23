@@ -19,7 +19,7 @@ function update-found
 	echo $total_pen
 	if ( $total_pen > 0 ); then
 		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
-	else
+	else if ( $total_pen == 0 ); then
 		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" $score_report
 	fi
 }
