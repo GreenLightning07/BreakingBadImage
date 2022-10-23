@@ -1,4 +1,8 @@
 --PENALTIES--
+Apache2 is Disabled or Running on Wrong Port -10
+MySQL is Disabled or Running on Wrong Port -10
+PHP??
+
 heisenburg is Not an Admin -5
 jesse is Not an Admin -5
 saul is Not an Admin -5
