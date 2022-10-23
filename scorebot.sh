@@ -16,11 +16,11 @@ function update-found
 	echo $total_percent
         sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/50<\/h3>/g" $score_report
         sed -i "s/id=\"total_percent\".*/id=\"total_percent\">$total_percent%<\/h3>/g" $score_report
-	echo $total_pen
-	if ( $total_pen > 0 ); then
-		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
-	else if ( $total_pen == 0 ); then
+	
+	if ( $total_pen == 0 ); then
 		sed -i "s/id=\"p0\"style=\"display:none\"/id=\"p0\"style=\"display:block\"/g" $score_report
+	else
+		sed -i "s/id=\"p0\"style=\"display:block\"/id=\"p0\"style=\"display:none\"/g" $score_report
 	fi
 }
 
